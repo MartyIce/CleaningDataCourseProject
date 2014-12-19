@@ -43,9 +43,8 @@ complete <- function(rootDir) {
   colnames(features)[2] = 'Activity'
   slimmed = merge(x=features, y=slimmed, by.x="V1", by.y="ActivityId")
   slimmed$V1 <- NULL  
-  agged <- agg(slimmed);
-  
-  write.table(agged, 'tidy.txt', row.name=FALSE)
+  agged <- agg(slimmed);  
+  agged
 }
 
 go <- function() {
